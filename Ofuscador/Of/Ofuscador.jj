@@ -1,0 +1,130 @@
+options { Ignore_Case = false; }
+
+PARSER_BEGIN(Ofuscador)
+	public class Ofuscador{
+		public static void main (String[] args) throws ParseException{
+		Ofuscador anLex = new Ofuscador(System.in);
+		anLex.unaExpresion();
+		}
+}
+PARSER_END(Ofuscador)
+
+
+
+
+TOKEN :
+{
+	<SUMA: "+"> {System.out.print(image);}
+	|
+	<RESTA: "-"> {System.out.print(image);}
+	|
+	<IGUAL: "="> {System.out.print(image);}
+	|
+	<MULTIPLICACION: "*"> {System.out.print(image);}
+	|
+	<DIVISION: "/"> {System.out.print(image);}
+	|
+	<MAYOR_QUE: ">"> {System.out.print(image);}
+	|
+	<MENOR_QUE: "<"> {System.out.print(image);}
+	|
+	<MODULO: "%"> {System.out.print(image);}
+	|
+	<EXCLAMACION: "!"> {System.out.print(image);}
+	|
+	<AMPERSAND: "&"> {System.out.print(image);}
+	|
+	<DOS_PUNTOS: ":"> {System.out.print(image);}
+}
+TOKEN:
+{
+	<LETRA_MIN: ["a"-"z"]>
+	{	
+		System.out.print(image.charAt(0));
+		System.out.print((int)image.charAt(0) + (int)image.charAt(image.length() - 1));
+		System.out.print("x" + image.chars().sum());
+		System.out.print(image.charAt(image.length() - 1));
+	}
+	|
+	<PUBLIC: "public" >{System.out.print(image+" ");}
+	|
+	<CLASS: "class" >{System.out.print(image+" ");}
+	|
+	<STATIC: "static" >{System.out.print(image+" ");}
+	|
+	<VOID: "void" >{System.out.print(image+" ");}
+	|
+	<MAIN: "main" >{System.out.print(image+" ");}
+	|
+	<INT: "int" >{System.out.print(image+" ");}
+	|
+	<FLOAT: "float" >{System.out.print(image+" ");}
+	|
+	<IF: "if" >{System.out.print(image+" ");}
+	|
+	<ELSE: "else" >{System.out.print(image+" ");}
+	|
+	<FOR: "for" >{System.out.print(image+" ");}
+	|
+	<WHILE: "while" >{System.out.print(image+" ");}
+	|
+	<SYSTEM: "System" >{System.out.print(image);}
+	|
+	<STRING: "String" >{System.out.print(image+" ");}
+	|
+	<ARG: "arg" >{System.out.print(image);}
+	|
+	<INTEGER: "Integer" >{System.out.print(image);}
+	|
+	<BOOLEAN: "boolean" >{System.out.print(image+" ");}
+	|
+	<TRUE: "true" >{System.out.print(image+" ");}
+	|
+	<FALSE: "false" >{System.out.print(image+" ");}
+	|
+	<RETURN: "return" >{System.out.print(image+" ");}
+
+}
+TOKEN:
+{
+	<ID: ( ["a"-"z", "A"-"Z"] ) ( ["a"-"z", "A"-"Z", "0"-"9"] )*>{
+		System.out.print(image.charAt(0));
+		System.out.print((int)image.charAt(0) + (int)image.charAt(image.length() - 1));
+		System.out.print("x" + image.chars().sum());
+		System.out.print(image.charAt(image.length() - 1));
+	}
+	|
+	<NUMERO_INT:( ["0"-"9"] )+ > {System.out.print(image);}
+	|
+	<METODO: "." ( ["a"-"z", "A"-"Z"] ) ( ["a"-"z", "A"-"Z", "0"-"9"] )* > {System.out.print(image);}
+}
+TOKEN:
+{
+	<LLAVE_IZQ: "["> {System.out.print(image);}
+	| <LLAVE_DER: "]"> {System.out.print(image);}
+	| <PARENTESIS_IZQ: "("> {System.out.print(image);}
+	| <PARENTESIS_DER: ")"> {System.out.print(image);}
+	| <CORCHETE_IZQ: "{"> {System.out.print(image);}
+	| <CORCHETE_DER: "}"> {System.out.print(image);}
+	| <PUNTO_COMA: ";">	{System.out.print(image);}
+	| <COMILLAS: "\"">	{System.out.print(image);}
+}
+SKIP:
+{
+	" " 
+	| "\t" 
+	| "\n" 
+	| "\r"
+}
+SKIP:
+{
+   <COMENTARIO: "//" ( ~["\t", "\r", "\n"]  )* >
+   |
+   <~[]>  {System.out.print("Simbolo no valido");}
+}
+
+
+void unaExpresion(): {}
+{
+	(<SUMA> | <RESTA> | <IGUAL> | <MULTIPLICACION> | <DIVISION> | <MAYOR_QUE> | <MENOR_QUE> | <MODULO> | <EXCLAMACION> | <AMPERSAND> | <DOS_PUNTOS> | <LETRA_MIN> | <ID> | <PUBLIC> | <STATIC> | <VOID> | <MAIN> | <CLASS> | <INT> | <FLOAT> | <IF> | <ELSE> | <FOR> | <WHILE> | <SYSTEM> | <STRING> | <ARG> | <INTEGER> | <BOOLEAN> | <TRUE> | <FALSE> | <RETURN> | <METODO> | <NUMERO_INT> | <LLAVE_DER> | <LLAVE_IZQ> | <CORCHETE_DER> | <CORCHETE_IZQ> | <PARENTESIS_DER> | <PARENTESIS_IZQ> | <PUNTO_COMA> |<COMILLAS> )+ <EOF>
+}

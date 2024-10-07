@@ -1,0 +1,39 @@
+options { Ignore_Case = false; }
+
+PARSER_BEGIN(Ejercicio1)
+	public class Ejercicio1{
+		public static void main (String[] args) throws ParseException{
+		Ejercicio1 anLex = new Ejercicio1(System.in);
+		anLex.unaExpresion();
+		System.out.println("Analisis Terminado.");
+		}
+}
+PARSER_END(Ejercicio1)
+
+TOKEN :
+{
+	<OPSUMA: "+">
+	|
+	<LETRAMIN: ["a"-"z"]>
+}
+TOKEN:
+{
+	<ID: ["a"-"z"] ( ["a"-"z", "A"-"Z", "0"-"9"] )*>
+	|
+	<MAT: ["A"-"Z"] (["0"-"9"]){7} ["a"-"z"]> {System.out.print(image+"@umich.mx,");}
+}
+SKIP:
+{
+	" " | "\t" | "\r"
+}
+
+SKIP:
+{
+   <~[]> 
+}
+
+
+void unaExpresion(): {}
+{
+	(<OPSUMA> | <LETRAMIN>|<ID> | <MAT>)+
+}

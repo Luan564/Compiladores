@@ -1,0 +1,55 @@
+1. Encontre un comentario: // add.decaf - simple addition example
+2. Encontre una palabra reservada: def
+2. Encontre una palabra reservada: int
+2. Encontre un ID: add
+2. Encontre operador de agrupacion: (
+2. Encontre una palabra reservada: int
+2. Encontre un ID: x
+2. Encontre una coma: ,
+2. Encontre una palabra reservada: int
+2. Encontre un ID: y
+2. Encontre operador de agrupacion: )
+3. Encontre operador de agrupacion: {
+4. Encontre una palabra reservada: return
+4. Encontre un ID: x
+4. Encontre operador de suma: +
+4. Encontre un ID: y
+4. Encontre un punto y coma: ;
+4. Encontre un comentario: // add the two parameters
+5. Encontre operador de agrupacion: }
+6. Encontre una palabra reservada: def
+6. Encontre una palabra reservada: int
+6. Encontre una palabra reservada: main
+6. Encontre operador de agrupacion: (
+6. Encontre operador de agrupacion: )
+7. Encontre operador de agrupacion: {
+8. Encontre una palabra reservada: int
+8. Encontre un ID: a
+8. Encontre un punto y coma: ;
+9. Encontre un ID: a
+9. Encontre operador de asignacion: =
+9. Encontre un Numero entero: 3
+9. Encontre un punto y coma: ;
+10. Encontre una palabra reservada: return
+10. Encontre un ID: add
+10. Encontre operador de agrupacion: (
+10. Encontre un ID: a
+10. Encontre una coma: ,
+10. Encontre un Numero entero: 2
+10. Encontre operador de agrupacion: )
+10. Encontre un punto y coma: ;
+11. Encontre operador de agrupacion: }
+14. Encontre un ID incorrecto: 1VAriable7
+15. Encontre un Numero Hexadecimal: 0x845A1F
+17. Encontre un Numero Hexadecimal incorrecto: 0x842A75S
+19. Encontre un ID incorrecto: 2A75
+21. Encontre un comentario de varias lineas: /*
+Este es un comentario de varias lineas
+linea 2
+linea 3 
+fokiu
+*/
+28. Encontre un Numero Flotante: 1.78
+29. Encontre un numero Flotante incorrecto: .65
+30. Encontre un numero Flotante incorrecto: 0.
+El numero: 84166518 excede el limite de 32767!!
