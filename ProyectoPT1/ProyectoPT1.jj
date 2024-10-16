@@ -9,7 +9,9 @@ PARSER_BEGIN(ProyectoPT1)
 }
 PARSER_END(ProyectoPT1)
 
-
+//Luis Angel Gutierrez Juarez
+//Perla Paola Pantaleon Bedolla
+//Luis Alberto Galeana Vargas
 
 
 TOKEN :
@@ -125,7 +127,7 @@ TOKEN :
 	}
 	| 
 	<COMILLAS: "\"">	{
-		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);
+		System.out.println(matchedToken.beginLine + ". Encontre una comilla: "+image);
 	}
 
 }
@@ -180,7 +182,7 @@ TOKEN:
 		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
 	}
 	|
-	<STRING: "String" >{
+	<STRING: "string" >{
 		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
 	}
 	|
@@ -223,17 +225,21 @@ TOKEN:
 	<CONTINUE: "continue" >{
 		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
 	}
+	|
+	<PRINT: "print" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
 }
 
 TOKEN:
 {
-	<ID: ( ["a"-"z", "A"-"Z"] ) ( ["a"-"z", "A"-"Z", "0"-"9"] )*>{
+	<ID: ( ["a"-"z", "A"-"Z"] ) ( ["a"-"z", "A"-"Z", "0"-"9", "_"] )*>{
 		System.out.println(matchedToken.beginLine + ". Encontre un ID: "+image);	
 	}
 	|
 	<NUMERO_INT:( ["0"-"9"] )+ > {
 		if(Integer.parseInt(image.toString()) > 32767){
-			System.out.println("El numero: " +image +" excede el limite de 32767!!");
+			System.out.println(matchedToken.beginLine + ". El numero: " +image +" excede el limite de 32767!!");
 		}
 		else{
 			System.out.println(matchedToken.beginLine + ". Encontre un Numero entero: "+image);
@@ -247,6 +253,10 @@ TOKEN:
 	<NUMERO_FLOAT: ( ["0"-"9"] )+ "." ( ["0"-"9"] )+ > {
 		System.out.println(matchedToken.beginLine + ". Encontre un Numero Flotante: "+image);	
 	}
+	|
+	<ARRAY: "\"" ( ~["\""] )* "\"">  {
+		System.out.println(matchedToken.beginLine + ". Encontre un Array: "+image);
+   	}
 }
 
 SPECIAL_TOKEN:
@@ -255,7 +265,11 @@ SPECIAL_TOKEN:
 		System.out.println(matchedToken.beginLine + ". Encontre un Numero Hexadecimal incorrecto: "+image);	
 	}
 	|
-	<ID_NT: ( ["0"-"9"] ) ( ["a"-"z", "A"-"Z", "0"-"9"] )*>{
+	<ID_NT: ( ["0"-"9"] ) ( ["a"-"z", "A"-"Z", "0"-"9", "_"] )* >{
+		System.out.println(matchedToken.beginLine + ". Encontre un ID incorrecto: "+image);	
+	}
+	|
+	<ID_NT2: ( ["a"-"z", "A"-"Z"] ) ( ["a"-"z", "A"-"Z", "0"-"9", "_", "°", "#", "$", "&", "?", "¿", "¬", "^", "`", "¬"] )* >{
 		System.out.println(matchedToken.beginLine + ". Encontre un ID incorrecto: "+image);	
 	}
 	|
@@ -295,5 +309,5 @@ SPECIAL_TOKEN:
 
 void unaExpresion(): {}
 {
-	(<SUMA> | <RESTA> | <IGUAL> | <MULTIPLICACION> | <DIVISION> | <MAYOR_QUE> | <MENOR_QUE> | <MAYOR_IGUAL_QUE> | <MENOR_IGUAL_QUE> | <MODULO> | <IGUAL_IGUAL> | <DISTINTO> | <AND> | <OR> | <EXCLAMACION> | <DOS_PUNTOS> | <ID> | <PUBLIC> | <STATIC> | <VOID> | <MAIN> | <CLASS> | <INT> | <FLOAT> | <IF> | <ELSE> | <FOR> | <WHILE> | <SYSTEM> | <STRING> | <ARG> | <INTEGER> | <BOOL> | <BOOLEAN> | <TRUE> | <FALSE> | <RETURN> | <DEF> | <BREAK> | <CONTINUE> | <NUMERO_INT> | <NUMERO_HEX> | <NUMERO_FLOAT> | <LLAVE_DER> | <LLAVE_IZQ> | <CORCHETE_DER> | <CORCHETE_IZQ> | <PARENTESIS_DER> | <PARENTESIS_IZQ> | <COMA> | <PUNTO_COMA> |<COMILLAS> )+ <EOF>
+	(<SUMA> | <RESTA> | <IGUAL> | <MULTIPLICACION> | <DIVISION> | <MAYOR_QUE> | <MENOR_QUE> | <MAYOR_IGUAL_QUE> | <MENOR_IGUAL_QUE> | <MODULO> | <IGUAL_IGUAL> | <DISTINTO> | <AND> | <OR> | <EXCLAMACION> | <DOS_PUNTOS> | <ID> | <PUBLIC> | <STATIC> | <VOID> | <MAIN> | <CLASS> | <INT> | <FLOAT> | <IF> | <ELSE> | <FOR> | <WHILE> | <SYSTEM> | <STRING> | <ARG> | <INTEGER> | <BOOL> | <BOOLEAN> | <TRUE> | <FALSE> | <RETURN> | <DEF> | <BREAK> | <CONTINUE> | <PRINT> | <NUMERO_INT> | <NUMERO_HEX> | <NUMERO_FLOAT> | <ARRAY> | <LLAVE_DER> | <LLAVE_IZQ> | <CORCHETE_DER> | <CORCHETE_IZQ> | <PARENTESIS_DER> | <PARENTESIS_IZQ> | <COMA> | <PUNTO_COMA> |<COMILLAS> )+ <EOF>
 }

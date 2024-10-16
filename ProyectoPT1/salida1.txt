@@ -39,21 +39,3 @@
 10. Encontre operador de agrupacion: )
 10. Encontre un punto y coma: ;
 11. Encontre operador de agrupacion: }
-13. Encontre un ID incorrecto: 1VAriable7
-14. Encontre un Numero Hexadecimal: 0x845A1F
-15. Encontre un Numero Hexadecimal incorrecto: 0x842A75S
-16. Encontre un ID incorrecto: 2A75
-17. Encontre un comentario de varias lineas: /*
-Este es un comentario de varias lineas
-linea 2
-linea 3 
-*/
-22. Encontre un Numero Flotante: 1.78
-23. Encontre un numero Flotante incorrecto: .65
-24. Encontre un numero Flotante incorrecto: 0.
-25. El numero: 84166518 excede el limite de 32767!!
-26. Encontre un ID: x
-26. Encontre operador de asignacion: =
-26. Encontre un Numero entero: 10
-27. Encontre un ID incorrecto: x&89
-28. Encontre un ID incorrecto: gf7t°48sd

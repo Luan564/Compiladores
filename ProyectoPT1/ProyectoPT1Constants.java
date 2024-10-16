@@ -105,25 +105,31 @@ public interface ProyectoPT1Constants {
   /** RegularExpression Id. */
   int CONTINUE = 48;
   /** RegularExpression Id. */
-  int ID = 49;
+  int PRINT = 49;
   /** RegularExpression Id. */
-  int NUMERO_INT = 50;
+  int ID = 50;
   /** RegularExpression Id. */
-  int NUMERO_HEX = 51;
+  int NUMERO_INT = 51;
   /** RegularExpression Id. */
-  int NUMERO_FLOAT = 52;
+  int NUMERO_HEX = 52;
   /** RegularExpression Id. */
-  int NUMERO_HEX_NT = 53;
+  int NUMERO_FLOAT = 53;
   /** RegularExpression Id. */
-  int ID_NT = 54;
+  int ARRAY = 54;
   /** RegularExpression Id. */
-  int NUMERO_FLOAT_NT1 = 55;
+  int NUMERO_HEX_NT = 55;
   /** RegularExpression Id. */
-  int NUMERO_FLOAT_NT2 = 56;
+  int ID_NT = 56;
   /** RegularExpression Id. */
-  int COMENTARIO = 61;
+  int ID_NT2 = 57;
   /** RegularExpression Id. */
-  int COMENTARIO_VARIASLINEAS = 63;
+  int NUMERO_FLOAT_NT1 = 58;
+  /** RegularExpression Id. */
+  int NUMERO_FLOAT_NT2 = 59;
+  /** RegularExpression Id. */
+  int COMENTARIO = 64;
+  /** RegularExpression Id. */
+  int COMENTARIO_VARIASLINEAS = 66;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -168,7 +174,7 @@ public interface ProyectoPT1Constants {
     "\"for\"",
     "\"while\"",
     "\"System\"",
-    "\"String\"",
+    "\"string\"",
     "\"arg\"",
     "\"Integer\"",
     "\"bool\"",
@@ -179,12 +185,15 @@ public interface ProyectoPT1Constants {
     "\"def\"",
     "\"break\"",
     "\"continue\"",
+    "\"print\"",
     "<ID>",
     "<NUMERO_INT>",
     "<NUMERO_HEX>",
     "<NUMERO_FLOAT>",
+    "<ARRAY>",
     "<NUMERO_HEX_NT>",
     "<ID_NT>",
+    "<ID_NT2>",
     "<NUMERO_FLOAT_NT1>",
     "<NUMERO_FLOAT_NT2>",
     "\" \"",
@@ -192,7 +201,7 @@ public interface ProyectoPT1Constants {
     "\"\\n\"",
     "\"\\r\"",
     "<COMENTARIO>",
-    "<token of kind 62>",
+    "<token of kind 65>",
     "<COMENTARIO_VARIASLINEAS>",
   };
 

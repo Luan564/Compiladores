@@ -1,0 +1,72 @@
+1. Encontre un comentario: // This tests setting the stack frame size correctly
+2. Encontre una palabra reservada: int
+2. Encontre un ID: a
+2. Encontre un punto y coma: ;
+3. Encontre una palabra reservada: int
+3. Encontre un ID: b
+3. Encontre un punto y coma: ;
+5. Encontre una palabra reservada: def
+5. Encontre una palabra reservada: void
+5. Encontre un ID: Recur
+5. Encontre operador de agrupacion: (
+5. Encontre una palabra reservada: int
+5. Encontre un ID: depth
+5. Encontre operador de agrupacion: )
+5. Encontre un comentario: //11 var = 44 bytes total
+6. Encontre operador de agrupacion: {
+7. Encontre una palabra reservada: int
+7. Encontre un ID: c
+7. Encontre un punto y coma: ;
+8. Encontre una palabra reservada: int
+8. Encontre un ID: d
+8. Encontre un punto y coma: ;
+8. Encontre un comentario: // 2 locals
+9. Encontre una palabra reservada: if
+9. Encontre operador de agrupacion: (
+9. Encontre un ID: depth
+9. Encontre operador relacional: <
+9. Encontre un Numero entero: 0
+9. Encontre operador de agrupacion: )
+9. Encontre operador de agrupacion: {
+9. Encontre una palabra reservada: return
+9. Encontre un punto y coma: ;
+9. Encontre operador de agrupacion: }
+9. Encontre un comentario: // 2 temps, 0, <
+10. Encontre una palabra reservada: if
+10. Encontre operador de agrupacion: (
+10. Encontre un ID: depth
+10. Encontre operador resto: %
+10. Encontre un Numero entero: 1000
+10. Encontre operador de relacional: ==
+10. Encontre un Numero entero: 0
+10. Encontre operador de agrupacion: )
+10. Encontre operador de agrupacion: {
+10. Encontre un ID: Print
+10. Encontre operador de agrupacion: (
+10. Encontre un ID: depth
+10. Encontre una coma: ,
+10. Encontre un Array: "\n"
+10. Encontre operador de agrupacion: )
+10. Encontre un punto y coma: ;
+10. Encontre un comentario: // 5 temps 1000, %, 0, ==, \n}
+11. Encontre un ID: Recur
+11. Encontre operador de agrupacion: (
+11. Encontre un ID: depth
+11. Encontre operador de resta: -
+11. Encontre un Numero entero: 1
+11. Encontre operador de agrupacion: )
+11. Encontre un punto y coma: ;
+11. Encontre un comentario: // 2 temps 1, -
+12. Encontre operador de agrupacion: }
+14. Encontre una palabra reservada: def
+14. Encontre una palabra reservada: void
+14. Encontre una palabra reservada: main
+14. Encontre operador de agrupacion: (
+14. Encontre operador de agrupacion: )
+15. Encontre operador de agrupacion: {
+16. Encontre un ID: Recur
+16. Encontre operador de agrupacion: (
+16. Encontre un Numero entero: 20000
+16. Encontre operador de agrupacion: )
+16. Encontre un punto y coma: ;
+17. Encontre operador de agrupacion: }

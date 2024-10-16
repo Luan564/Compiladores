@@ -1,0 +1,218 @@
+1. Encontre una palabra reservada: def
+1. Encontre una palabra reservada: void
+1. Encontre un ID: SayHi
+1. Encontre operador de agrupacion: (
+1. Encontre operador de agrupacion: )
+1. Encontre operador de agrupacion: {
+2. Encontre una palabra reservada: int
+2. Encontre un ID: c
+2. Encontre un punto y coma: ;
+4. Encontre un ID: c
+4. Encontre operador de asignacion: =
+4. Encontre un Numero entero: 15
+4. Encontre un punto y coma: ;
+5. Encontre una palabra reservada: if
+5. Encontre operador de agrupacion: (
+5. Encontre una palabra reservada: false
+5. Encontre operador de agrupacion: )
+5. Encontre operador de agrupacion: {
+6. Encontre una palabra reservada: return
+6. Encontre un punto y coma: ;
+6. Encontre operador de agrupacion: }
+7. Encontre un ID: c
+7. Encontre operador de asignacion: =
+7. Encontre un ID: c
+7. Encontre operador de resta: -
+7. Encontre operador de agrupacion: (
+7. Encontre un ID: c
+7. Encontre operador de multiplicacion: *
+7. Encontre un ID: c
+7. Encontre operador de agrupacion: )
+7. Encontre un punto y coma: ;
+8. Encontre un ID: Print
+8. Encontre operador de agrupacion: (
+8. Encontre un Numero entero: 2
+8. Encontre operador de multiplicacion: *
+8. Encontre un ID: c
+8. Encontre una coma: ,
+8. Encontre un ID: c
+8. Encontre operador de agrupacion: )
+8. Encontre un punto y coma: ;
+9. Encontre operador de agrupacion: }
+10. Encontre una palabra reservada: def
+10. Encontre una palabra reservada: int
+10. Encontre un ID: one
+10. Encontre operador de agrupacion: (
+10. Encontre una palabra reservada: int
+10. Encontre un ID: a
+10. Encontre una coma: ,
+10. Encontre una palabra reservada: int
+10. Encontre un ID: b
+10. Encontre operador de agrupacion: )
+11. Encontre operador de agrupacion: {
+12. Encontre un ID: SayHi
+12. Encontre operador de agrupacion: (
+12. Encontre operador de agrupacion: )
+12. Encontre un punto y coma: ;
+13. Encontre una palabra reservada: return
+13. Encontre operador de agrupacion: (
+13. Encontre un ID: a
+13. Encontre operador de resta: -
+13. Encontre un Numero entero: 1
+13. Encontre operador de agrupacion: )
+13. Encontre operador de multiplicacion: *
+13. Encontre un ID: b
+13. Encontre operador de suma: +
+13. Encontre un Numero entero: 1
+13. Encontre un punto y coma: ;
+14. Encontre operador de agrupacion: }
+16. Encontre una palabra reservada: def
+16. Encontre una palabra reservada: int
+16. Encontre un ID: two
+16. Encontre operador de agrupacion: (
+16. Encontre una palabra reservada: int
+16. Encontre un ID: c
+16. Encontre una coma: ,
+16. Encontre una palabra reservada: bool
+16. Encontre un ID: b
+16. Encontre operador de agrupacion: )
+17. Encontre operador de agrupacion: {
+18. Encontre una palabra reservada: int
+18. Encontre un ID: d
+18. Encontre un punto y coma: ;
+19. Encontre un ID: c
+19. Encontre operador de asignacion: =
+19. Encontre un ID: one
+19. Encontre operador de agrupacion: (
+19. Encontre un ID: c
+19. Encontre una coma: ,
+19. Encontre un Numero entero: 3
+19. Encontre operador de agrupacion: )
+19. Encontre un punto y coma: ;
+20. Encontre un ID: d
+20. Encontre operador de asignacion: =
+20. Encontre un ID: one
+20. Encontre operador de agrupacion: (
+20. Encontre un Numero entero: 4
+20. Encontre una coma: ,
+20. Encontre un Numero entero: 5
+20. Encontre operador de agrupacion: )
+20. Encontre un punto y coma: ;
+21. Encontre un ID: Print
+21. Encontre operador de agrupacion: (
+21. Encontre un ID: c
+21. Encontre una coma: ,
+21. Encontre un ID: d
+21. Encontre una coma: ,
+21. Encontre un Array: "\n"
+21. Encontre operador de agrupacion: )
+21. Encontre un punto y coma: ;
+22. Encontre un ID: b
+22. Encontre operador de asignacion: =
+22. Encontre un ID: c
+22. Encontre operador relacional: <
+22. Encontre un ID: d
+22. Encontre un punto y coma: ;
+23. Encontre una palabra reservada: if
+23. Encontre operador de agrupacion: (
+23. Encontre un ID: b
+23. Encontre operador de agrupacion: )
+23. Encontre operador de agrupacion: {
+24. Encontre una palabra reservada: return
+24. Encontre un ID: c
+24. Encontre operador de multiplicacion: *
+24. Encontre un ID: d
+24. Encontre un punto y coma: ;
+24. Encontre operador de agrupacion: }
+25. Encontre una palabra reservada: else
+25. Encontre operador de agrupacion: {
+26. Encontre una palabra reservada: return
+26. Encontre un ID: c
+26. Encontre operador de division: /
+26. Encontre un ID: d
+26. Encontre un punto y coma: ;
+26. Encontre operador de agrupacion: }
+27. Encontre operador de agrupacion: }
+29. Encontre una palabra reservada: def
+29. Encontre una palabra reservada: void
+29. Encontre un ID: three
+29. Encontre operador de agrupacion: (
+29. Encontre una palabra reservada: int
+29. Encontre un ID: a
+29. Encontre operador de agrupacion: )
+30. Encontre operador de agrupacion: {
+31. Encontre una palabra reservada: int
+31. Encontre un ID: b
+31. Encontre un punto y coma: ;
+32. Encontre una palabra reservada: int
+32. Encontre un ID: c
+32. Encontre un punto y coma: ;
+34. Encontre un ID: b
+34. Encontre operador de asignacion: =
+34. Encontre un Numero entero: 3
+34. Encontre operador de multiplicacion: *
+34. Encontre un ID: a
+34. Encontre un punto y coma: ;
+35. Encontre un ID: c
+35. Encontre operador de asignacion: =
+35. Encontre un ID: two
+35. Encontre operador de agrupacion: (
+35. Encontre un ID: b
+35. Encontre una coma: ,
+35. Encontre un ID: b
+35. Encontre operador de relacional: ==
+35. Encontre un Numero entero: 3
+35. Encontre operador de agrupacion: )
+35. Encontre un punto y coma: ;
+36. Encontre un ID: b
+36. Encontre operador de asignacion: =
+36. Encontre un ID: two
+36. Encontre operador de agrupacion: (
+36. Encontre un ID: c
+36. Encontre una coma: ,
+36. Encontre un ID: b
+36. Encontre operador de relacional: ==
+36. Encontre un Numero entero: 3
+36. Encontre operador de agrupacion: )
+36. Encontre un punto y coma: ;
+37. Encontre un ID: Print
+37. Encontre operador de agrupacion: (
+37. Encontre un ID: b
+37. Encontre una coma: ,
+37. Encontre un ID: c
+37. Encontre una coma: ,
+37. Encontre un Array: "\n"
+37. Encontre operador de agrupacion: )
+37. Encontre un punto y coma: ;
+38. Encontre operador de agrupacion: }
+40. Encontre una palabra reservada: def
+40. Encontre una palabra reservada: void
+40. Encontre una palabra reservada: main
+40. Encontre operador de agrupacion: (
+40. Encontre operador de agrupacion: )
+41. Encontre operador de agrupacion: {
+42. Encontre una palabra reservada: int
+42. Encontre un ID: i
+42. Encontre un punto y coma: ;
+43. Encontre una palabra reservada: while
+43. Encontre operador de agrupacion: (
+43. Encontre un ID: i
+43. Encontre operador relacional: <=
+43. Encontre un Numero entero: 4
+43. Encontre operador de agrupacion: )
+43. Encontre operador de agrupacion: {
+44. Encontre un ID: three
+44. Encontre operador de agrupacion: (
+44. Encontre un ID: i
+44. Encontre operador de multiplicacion: *
+44. Encontre un Numero entero: 10
+44. Encontre operador de agrupacion: )
+44. Encontre un punto y coma: ;
+45. Encontre un ID: i
+45. Encontre operador de asignacion: =
+45. Encontre un ID: i
+45. Encontre operador de suma: +
+45. Encontre un Numero entero: 1
+45. Encontre un punto y coma: ;
+46. Encontre operador de agrupacion: }
+47. Encontre operador de agrupacion: }
