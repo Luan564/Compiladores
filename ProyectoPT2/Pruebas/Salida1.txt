@@ -1,0 +1,2 @@
+1. Encontre un comentario: // add.decaf - simple addition example
+2. Encontre una palabra reservada: def

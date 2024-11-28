@@ -1,0 +1,23 @@
+//Ejemplo 3
+
+def int f()
+{
+    int a;
+    if (a == 0) {
+      return 12; }
+    else {
+	float a [10];
+	float  b[10];
+	
+      a[0] = 3.5 * b[0];
+      return 5 * 2;
+   }
+   return a;
+}
+
+
+def void main()
+{
+	f();
+}
+  

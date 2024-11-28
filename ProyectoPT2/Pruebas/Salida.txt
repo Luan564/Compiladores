@@ -1,0 +1,9 @@
+1. Encontre un ID: uno
+1. Encontre operador de agrupacion: (
+1. Encontre un Numero entero: 2
+1. Encontre una coma: ,
+1. Encontre un ID: a
+1. Encontre una coma: ,
+1. Encontre un Numero entero: 7
+1. Encontre operador de agrupacion: )
+1. Encontre un punto y coma: ;

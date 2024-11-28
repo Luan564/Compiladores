@@ -1,0 +1,2 @@
+1. Encontre un comentario: //Ejemplo 3
+3. Encontre una palabra reservada: def

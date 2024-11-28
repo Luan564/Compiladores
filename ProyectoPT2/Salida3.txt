@@ -1,0 +1,68 @@
+1. Encontre un comentario: //Ejemplo 3
+3. Encontre una palabra reservada: def
+3. Encontre una palabra reservada: int
+3. Encontre un ID: f
+3. Encontre operador de agrupacion: (
+3. Encontre operador de agrupacion: )
+4. Encontre operador de agrupacion: {
+5. Encontre una palabra reservada: int
+5. Encontre un ID: a
+5. Encontre un punto y coma: ;
+6. Encontre una palabra reservada: if
+6. Encontre operador de agrupacion: (
+6. Encontre un ID: a
+6. Encontre operador de relacional: ==
+6. Encontre un Numero entero: 0
+6. Encontre operador de agrupacion: )
+6. Encontre operador de agrupacion: {
+7. Encontre una palabra reservada: return
+7. Encontre un Numero entero: 12
+7. Encontre un punto y coma: ;
+7. Encontre operador de agrupacion: }
+8. Encontre una palabra reservada: else
+8. Encontre operador de agrupacion: {
+9. Encontre una palabra reservada: float
+9. Encontre un ID: a
+9. Encontre operador de agrupacion: [
+9. Encontre un Numero entero: 10
+9. Encontre operador de agrupacion: ]
+9. Encontre un punto y coma: ;
+10. Encontre una palabra reservada: float
+10. Encontre un ID: b
+10. Encontre operador de agrupacion: [
+10. Encontre un Numero entero: 10
+10. Encontre operador de agrupacion: ]
+10. Encontre un punto y coma: ;
+12. Encontre un ID: a
+12. Encontre operador de agrupacion: [
+12. Encontre un Numero entero: 0
+12. Encontre operador de agrupacion: ]
+12. Encontre operador de asignacion: =
+12. Encontre un Numero Flotante: 3.5
+12. Encontre operador de multiplicacion: *
+12. Encontre un ID: b
+12. Encontre operador de agrupacion: [
+12. Encontre un Numero entero: 0
+12. Encontre operador de agrupacion: ]
+12. Encontre un punto y coma: ;
+13. Encontre una palabra reservada: return
+13. Encontre un Numero entero: 5
+13. Encontre operador de multiplicacion: *
+13. Encontre un Numero entero: 2
+13. Encontre un punto y coma: ;
+14. Encontre operador de agrupacion: }
+15. Encontre una palabra reservada: return
+15. Encontre un ID: a
+15. Encontre un punto y coma: ;
+16. Encontre operador de agrupacion: }
+19. Encontre una palabra reservada: def
+19. Encontre una palabra reservada: void
+19. Encontre un ID: main
+19. Encontre operador de agrupacion: (
+19. Encontre operador de agrupacion: )
+20. Encontre operador de agrupacion: {
+21. Encontre un ID: f
+21. Encontre operador de agrupacion: (
+21. Encontre operador de agrupacion: )
+21. Encontre un punto y coma: ;
+22. Encontre operador de agrupacion: }

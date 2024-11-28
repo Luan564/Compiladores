@@ -31,7 +31,7 @@
 7. Encontre un punto y coma: ;
 8. Encontre un ID: Print
 8. Encontre operador de agrupacion: (
-8. El numero: 2768768 excede el limite de 32767!!
+8. Encontre un Numero entero: 2
 8. Encontre operador de multiplicacion: *
 8. Encontre un ID: c
 8. Encontre una coma: ,
@@ -41,12 +41,11 @@
 9. Encontre operador de agrupacion: }
 10. Encontre una palabra reservada: def
 10. Encontre una palabra reservada: int
-10. Encontre un ID incorrecto: 8ghone
+10. Encontre un ID: one
 10. Encontre operador de agrupacion: (
 10. Encontre una palabra reservada: int
 10. Encontre un ID: a
 10. Encontre una coma: ,
-10. Encontre un caracter no valido: @
 10. Encontre una palabra reservada: int
 10. Encontre un ID: b
 10. Encontre operador de agrupacion: )
@@ -87,24 +86,52 @@
 19. Encontre operador de agrupacion: (
 19. Encontre un ID: c
 19. Encontre una coma: ,
-19. Encontre un Numero Flotante: 3876.876
+19. Encontre un Numero entero: 3
 19. Encontre operador de agrupacion: )
 19. Encontre un punto y coma: ;
 20. Encontre un ID: d
 20. Encontre operador de asignacion: =
 20. Encontre un ID: one
 20. Encontre operador de agrupacion: (
-20. Encontre un numero Flotante incorrecto: 4879.
+20. Encontre un Numero entero: 4
 20. Encontre una coma: ,
-20. Encontre un numero Flotante incorrecto: .765
+20. Encontre un Numero entero: 5
 20. Encontre operador de agrupacion: )
 20. Encontre un punto y coma: ;
-21. Encontre un comentario de varias lineas: /*Print(c, d, "\n");
-      b = c < d;
-      if (b){
-		return c*d;}
-      else{
-		return c/d;}*/
+21. Encontre un ID: Print
+21. Encontre operador de agrupacion: (
+21. Encontre un ID: c
+21. Encontre una coma: ,
+21. Encontre un ID: d
+21. Encontre una coma: ,
+21. Encontre una cadena: "\n"
+21. Encontre operador de agrupacion: )
+21. Encontre un punto y coma: ;
+22. Encontre un ID: b
+22. Encontre operador de asignacion: =
+22. Encontre un ID: c
+22. Encontre operador relacional: <
+22. Encontre un ID: d
+22. Encontre un punto y coma: ;
+23. Encontre una palabra reservada: if
+23. Encontre operador de agrupacion: (
+23. Encontre un ID: b
+23. Encontre operador de agrupacion: )
+23. Encontre operador de agrupacion: {
+24. Encontre una palabra reservada: return
+24. Encontre un ID: c
+24. Encontre operador de multiplicacion: *
+24. Encontre un ID: d
+24. Encontre un punto y coma: ;
+24. Encontre operador de agrupacion: }
+25. Encontre una palabra reservada: else
+25. Encontre operador de agrupacion: {
+26. Encontre una palabra reservada: return
+26. Encontre un ID: c
+26. Encontre operador de division: /
+26. Encontre un ID: d
+26. Encontre un punto y coma: ;
+26. Encontre operador de agrupacion: }
 27. Encontre operador de agrupacion: }
 29. Encontre una palabra reservada: def
 29. Encontre una palabra reservada: void
@@ -154,13 +181,13 @@
 37. Encontre una coma: ,
 37. Encontre un ID: c
 37. Encontre una coma: ,
-37. Encontre un Array: "hghgu5465 hgyt\n"
+37. Encontre una cadena: "\n"
 37. Encontre operador de agrupacion: )
 37. Encontre un punto y coma: ;
 38. Encontre operador de agrupacion: }
 40. Encontre una palabra reservada: def
 40. Encontre una palabra reservada: void
-40. Encontre una palabra reservada: main
+40. Encontre un ID: main
 40. Encontre operador de agrupacion: (
 40. Encontre operador de agrupacion: )
 41. Encontre operador de agrupacion: {

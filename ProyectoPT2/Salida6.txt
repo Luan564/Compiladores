@@ -1,0 +1,32 @@
+1. Encontre una palabra reservada: def
+1. Encontre una palabra reservada: int
+1. Encontre un ID: ReadArray
+1. Encontre operador de agrupacion: (
+1. Encontre operador de agrupacion: )
+2. Encontre operador de agrupacion: {
+3. Encontre una palabra reservada: int
+3. Encontre un ID: i
+3. Encontre un punto y coma: ;
+4. Encontre una palabra reservada: int
+4. Encontre un ID: num
+4. Encontre un punto y coma: ;
+5. Encontre una palabra reservada: int
+5. Encontre un ID: arr
+5. Encontre operador de agrupacion: [
+5. Encontre un Numero entero: 20
+5. Encontre operador de agrupacion: ]
+5. Encontre un punto y coma: ;
+6. Encontre una palabra reservada: int
+6. Encontre un ID: numScores
+6. Encontre un punto y coma: ;
+9. Encontre un ID: i
+9. Encontre operador de asignacion: =
+9. Encontre un Numero entero: 0
+9. Encontre un punto y coma: ;
+10. Encontre una palabra reservada: while
+10. Encontre operador de agrupacion: (
+10. Encontre un ID: i
+10. Encontre operador relacional: <
+10. Encontre un ID: arr
+10. Encontre un caracter no valido: .
+10. Encontre un ID: length

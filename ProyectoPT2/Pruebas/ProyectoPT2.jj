@@ -1,0 +1,348 @@
+options { Ignore_Case = false; }
+
+PARSER_BEGIN(lexicoSintactico)
+	public class lexicoSintactico{
+		public static void main (String[] args) throws ParseException{
+		lexicoSintactico anLex = new lexicoSintactico(System.in);
+		anLex.inicia();
+		System.out.println("sintaxis válida.");
+		}
+	}
+PARSER_END(lexicoSintactico)
+
+SKIP:
+{ 
+    " " | "\t" | "\n" | "\r"  //Ignorar espacios en blanco, tabulaciones, saltos de línea y retornos de carro
+}
+ 
+TOKEN:
+{
+<IF: "if"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<ELSEIF: "elseif"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<ELSE:"else"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<WHILE:"while"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<FOR:"for"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<BREAK:"break"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<INT:"int"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<BOOLEAN:"boolean"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<VOID:"void"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<RETURN:"return"> {System.out.println(matchedToken.beginLine + ": Palabra reservada: " + image);} 
+|
+<CONTINUE:"continue"> {System.out.println(matchedToken.beginLine + ": Palabra reservada: " + image);} 
+|
+<TRUE:"true"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<FALSE:"false"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<STRUCT:"struct"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<CLASS:"class"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<EXTENDS:"extends"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<NEW:"new"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<NULL:"null"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<THIS:"this"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<CALLOUT:"callout"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<PROGRAM:"Program"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<STATIC:"static"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<EXTERN:"extern"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<PUBLIC:"public"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<STRING:"string"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<ARG:"arg"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<INTEGER:"integer"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<CHAR:"char"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<PARSEINT:"ParseInt"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<DEF:"def"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<OBJECT:"Object"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<LIST:"List"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<TUPLE:"Tuple"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<CONST:"const"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<IMPLEMENTS:"implements"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<SUPER:"super"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<INTERFACE:"interface"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<SELF:"self"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);} 
+|
+<FLOAT:"float"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);}
+|
+<BOOL:"bool"> {System.out.println(matchedToken.beginLine + ": Palabra reservada:  "+ image);}
+}
+
+// Definición de variables globales
+TOKEN_MGR_DECLS:
+{
+    static int longCadena;
+    static final int maximoEntero = 65535;
+    static StringBuilder cadenaActual = new StringBuilder();  // Almacena el contenido de la cadena
+}
+
+// Manejo de cadenas de caracteres
+MORE : { "\""  { 
+    longCadena = 0; 
+    cadenaActual.setLength(0); 
+} : DentroCadena }
+
+<DentroCadena> TOKEN: {
+    // Captura el fin de la cadena
+    <STRLIT: "\""> { 
+        System.out.print(matchedToken.beginLine + ": cadena:  "+ image);
+        System.out.println(" Número de caracteres = " + longCadena);
+    }: DEFAULT
+}
+
+<DentroCadena> MORE: {
+    // Captura cualquier carácter dentro de la cadena excepto el salto de línea y retorno de carro
+    <~["\n", "\r", "\""]> {
+        longCadena++;
+        cadenaActual.append(image);  // Agrega el carácter actual a la cadena
+        if (longCadena > maximoEntero) {
+            System.out.println("La cadena excede el límite de " + maximoEntero + " caracteres.");
+        }
+    }
+}
+TOKEN: 
+{
+    <ID: (["a"-"z"] | ["A"-"Z"]) (["a" -"z"] | ["A" - "Z"] | ["0"-"9"] | ["_"])* >
+    {
+        System.out.println(matchedToken.beginLine + ": Token de tipo ID, lexema: " + image);
+    }
+}
+
+TOKEN:
+{
+    // Número entero con signo
+    <NUMERO_ENTERO:  (["0"-"9"])+ > 
+    {
+            // Convertimos el número a long para manejar grandes valores
+            long valorLong = Long.parseLong(image.toString());
+
+            // Verificamos si está dentro del rango de un int (-2147483647 a 2147483647)
+            if (valorLong >= -2147483647L && valorLong <= 2147483647L) {
+                int valor = (int) valorLong;  // Solo lo convertimos a int si está en el rango
+                System.out.println(matchedToken.beginLine + ": Número entero: " + valor);
+            } else {
+                System.out.println("Número entero fuera del rango: " + image + " en la línea: " + matchedToken.beginLine);
+            }
+    }
+    |
+    <NUMERO_HEXA: ("0x" | "0X") (["0"-"9", "a"-"f", "A"-"F"])+ > 
+    {
+        System.out.println(matchedToken.beginLine + ": Número hexadecimal: " + image);
+    }
+    |
+    <NUMERO_FLOT: (["+", "-"])? (["0"-"9"])+ "." (["0"-"9"])+ >  {System.out.println(matchedToken.beginLine + ": Número flotante: " +image);}
+}
+
+
+SPECIAL_TOKEN: //Flotante mal construido
+{
+    <("." (["0"-"9"])+) | ((["0"-"9"])+ ".") | (["0"-"9"])+ ("." (["0"-"9"])+)? "." > {System.out.println("Número flotante mal construido: " + image + " en la línea: " + matchedToken.beginLine);}
+}
+SPECIAL_TOKEN: //hexadecimal mal construido
+{
+    <("0x" | "0X") (["0"-"9", "a"-"z", "A"-"Z"])+ > {System.out.println("Número hexadecimal mal construido: " + image + " en la línea: " + matchedToken.beginLine);}
+}
+
+SPECIAL_TOKEN: //identificador mal construido 
+{
+    <ID_MAL: (["a"-"z"] | ["A"-"Z"] | ["0"-"9"] | ["@", "#", "$", "ñ"]) (["a" -"z"] | ["A" - "Z"] | ["0"-"9"] | ["_"] | ["0"-"9"] | ["@", "#", "$", "ñ"])* >
+    {
+        System.out.println("identificar mal construido: " + image + " en la línea: " + matchedToken.beginLine);
+    }
+}
+
+TOKEN:
+{
+    <COMA: ","> {System.out.println(matchedToken.beginLine + ": Coma: "+image);}
+    |
+    <DOSPUNTOS: ":"> {System.out.println(matchedToken.beginLine + ": Dos puntos: "+image);}
+    |
+	<PUNTOCOMA: ";"> {System.out.println(matchedToken.beginLine + ": Punto y coma: "+image);}
+    |
+    <INCREMENTO: "++"> {System.out.println(matchedToken.beginLine + ": Incremento: "+image);}
+    |
+    <SUMA: "+"> {System.out.println(matchedToken.beginLine + ": Suma: "+image);}
+    |
+    <IGUALDAD: "=="> {System.out.println(matchedToken.beginLine + ": Igualdad: "+image);}
+    |
+    <IGUAL: "="> {System.out.println(matchedToken.beginLine + ": Igual: "+image);}
+    |
+    <PUNTO: "."> {System.out.println(matchedToken.beginLine + ": Punto: "+image);}
+    |
+    <MENORIGUAL: "<="> {System.out.println(matchedToken.beginLine + ": Menor o igual que: "+image);}
+    |
+    <MENORQUE: "<"> {System.out.println(matchedToken.beginLine + ": Menor que: "+image);}
+    |
+    <MAYORIGUAL: ">="> {System.out.println(matchedToken.beginLine + ": Mayor o igual que: "+image);}
+    |
+    <MAYORQUE: ">"> {System.out.println(matchedToken.beginLine + ": Mayor que: "+image);}
+    |
+    <MODULO: "%"> {System.out.println(matchedToken.beginLine + ": Modulo: "+image);}
+    |
+    <DECREMENTO: "--"> {System.out.println(matchedToken.beginLine + ". Decremento: " + image);}
+    |
+    <RESTA: "-"> {System.out.println(matchedToken.beginLine + ": Resta: "+image);}
+    |
+    <DIVISION: "/"> {System.out.println(matchedToken.beginLine + ": Division: "+image);}
+    |
+    <DIFERENTE: "!="> {System.out.println(matchedToken.beginLine + ": Direfente: "+image);}
+    |
+    <NEGACION: "!"> {System.out.println(matchedToken.beginLine + ": Negacion: "+image);}
+    |
+    <AND: "&&"> {System.out.println(matchedToken.beginLine + ": And: "+image);}
+    |
+    <OR: "||"> {System.out.println(matchedToken.beginLine + ": Or: "+image);}
+    |
+    <MUL: "*"> {System.out.println(matchedToken.beginLine + ": Multiplicación: "+image);}
+}
+
+
+TOKEN:
+{
+    <PARENTESIS_I: "("> {System.out.println(matchedToken.beginLine + ": Paréntesis izquierdo: "+image);}
+    |
+    <PARENTESIS_D: ")"> {System.out.println(matchedToken.beginLine + ": Paréntesis Derecho: "+image);}
+    |
+    <CORCHETE_I: "["> {System.out.println(matchedToken.beginLine + ": Corchete izquierdo: "+image);}
+    |
+    <CORCHETE_D: "]"> {System.out.println(matchedToken.beginLine + ": Corchete derecho: "+image);}
+    |
+    <LLAVE_I: "{"> {System.out.println(matchedToken.beginLine + ": Llave izquierda: "+image);}
+    |
+    <LLAVE_D: "}"> {System.out.println(matchedToken.beginLine + ": Llave derecha:"+image);}
+    //|
+    //<COMILLAS: "\""> {System.out.println(matchedToken.beginLine + ": Comilla: "+image);}
+}
+
+
+SKIP: 
+{ 
+   <"//" (~["\n"])* "\n">   //ignorar comentario simple
+} 
+
+SKIP: { "/*" : DentroComentario } // Inicia el estado de comentario largo
+
+<DentroComentario> SKIP: {
+    "*/" : DEFAULT  // Finaliza el estado de comentario largo
+}
+
+<DentroComentario> MORE: {
+    <~["*"]>  // Captura todo dentro del comentario, excepto el símbolo '*'
+}
+
+SPECIAL_TOKEN:
+{
+   <~[]>  {System.out.println("Símbolo no válido en la línea " + matchedToken.beginLine);}
+}
+
+//Inicio analisis sintactico
+void inicia():{ }
+{
+    PROGRAM()
+}
+
+void PROGRAM():{}
+{
+    (VAR() | FUNC())*  
+}
+void VAR():{}
+{
+    TYPE() <ID> (<CORCHETE_I> <NUMERO_ENTERO> <CORCHETE_D>)? 
+    (<COMA> <ID> (<CORCHETE_I> <NUMERO_ENTERO> <CORCHETE_D>)?)* <PUNTOCOMA>
+}
+void TYPE():{}
+{
+    <INT> | <BOOLEAN> | <VOID> | <FLOAT> | <STRING> | <BOOL>
+}
+void FUNC():{}
+{
+    <DEF> TYPE() <ID> <PARENTESIS_I> (PARAMS())? <PARENTESIS_D> BLOCK() 
+}
+void PARAMS():{}
+{
+    TYPE() <ID> (<COMA> TYPE() <ID>)*
+}
+void BLOCK():{}
+{
+    <LLAVE_I> (VAR())* (STMT())* <LLAVE_D> 
+}
+void STMT():{}
+{
+    LOOKAHEAD(2)LOC() <IGUAL>  EXPR() <PUNTOCOMA>
+    | FUNCCALL() <PUNTOCOMA>
+    | <IF> <PARENTESIS_I> EXPR() <PARENTESIS_D> BLOCK() (<ELSE> BLOCK())?
+    | <WHILE> <PARENTESIS_I> EXPR() <PARENTESIS_D> BLOCK()
+    | <RETURN> (EXPR())? <PUNTOCOMA>
+    | <BREAK> <PUNTOCOMA>
+    | <CONTINUE> <PUNTOCOMA>    
+}
+void EXPR():{}
+{
+    UNOP() BASEEXPR() EXPRP()
+    | BASEEXPR() EXPRP()    
+}
+void EXPRP():{}
+{
+    (LOOKAHEAD(2) BINOP() EXPR() EXPRP())*
+}
+void BASEEXPR():{}
+{
+    <PARENTESIS_I> EXPR() <PARENTESIS_D>
+    | LOOKAHEAD(2)FUNCCALL()
+    | LOC()
+    | LIT()
+}
+void LOC():{}
+{
+    <ID> (<CORCHETE_I> EXPR() <CORCHETE_D>)?
+}
+void FUNCCALL():{}{
+    <ID> <PARENTESIS_I> (ARGS())? <PARENTESIS_D>
+}
+void ARGS():{}
+{
+    EXPR() (<COMA> EXPR())*
+}
+void LIT():{}
+{
+   <NUMERO_ENTERO> | <NUMERO_HEXA> | <STRLIT> | <TRUE> | <FALSE> | <NUMERO_FLOT>   
+}
+void UNOP():{}
+{
+    <NEGACION> | <INCREMENTO> | <DECREMENTO>
+}
+void BINOP():{}
+{
+    <SUMA> | <RESTA> | <MUL> | <DIVISION> | <MODULO> | <AND> | <OR> | <IGUAL> | <IGUALDAD> | <DIFERENTE> | <MENORQUE> 
+    | <MAYORQUE> | <MENORIGUAL> | <MAYORIGUAL>
+}

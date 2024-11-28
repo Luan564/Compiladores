@@ -171,6 +171,9 @@
       case COMILLAS:
         jj_consume_token(COMILLAS);
         break;
+      case IMAGINARIO:
+        jj_consume_token(IMAGINARIO);
+        break;
       default:
         jj_la1[0] = jj_gen;
         jj_consume_token(-1);
@@ -231,6 +234,7 @@
       case NUMERO_HEX:
       case NUMERO_FLOAT:
       case ARRAY:
+      case IMAGINARIO:
         ;
         break;
       default:
@@ -264,7 +268,7 @@
       jj_la1_0 = new int[] {0xfffffffe,0xfffffffe,};
    }
    private static void jj_la1_init_1() {
-      jj_la1_1 = new int[] {0x7fffff,0x7fffff,};
+      jj_la1_1 = new int[] {0xffffff,0xffffff,};
    }
    private static void jj_la1_init_2() {
       jj_la1_2 = new int[] {0x0,0x0,};
@@ -405,7 +409,7 @@
   /** Generate ParseException. */
   static public ParseException generateParseException() {
     jj_expentries.clear();
-    boolean[] la1tokens = new boolean[67];
+    boolean[] la1tokens = new boolean[68];
     if (jj_kind >= 0) {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
@@ -425,7 +429,7 @@
         }
       }
     }
-    for (int i = 0; i < 67; i++) {
+    for (int i = 0; i < 68; i++) {
       if (la1tokens[i]) {
         jj_expentry = new int[1];
         jj_expentry[0] = i;

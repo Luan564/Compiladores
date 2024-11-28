@@ -1,0 +1,2 @@
+1. Encontre un comentario: //Ejemplo 2
+3. Encontre una palabra reservada: int

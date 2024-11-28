@@ -1,0 +1,348 @@
+options { Ignore_Case = false; }
+
+PARSER_BEGIN(ProyectoPT1)
+	public class ProyectoPT1{
+		public static void main (String[] args) throws ParseException{
+		ProyectoPT1 anLex = new ProyectoPT1(System.in);
+		anLex.unaExpresion();
+		}
+}
+PARSER_END(ProyectoPT1)
+
+//Luis Angel Gutierrez Juarez
+//Perla Paola Pantaleon Bedolla
+//Luis Alberto Galeana Vargas
+
+
+TOKEN :
+{
+		<LLAVE_IZQ: "["> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de agrupacion: "+image);
+	}
+	| 
+	<LLAVE_DER: "]"> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de agrupacion: "+image);
+	}
+	| 
+	<PARENTESIS_IZQ: "("> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de agrupacion: "+image);
+	}
+	| 
+	<PARENTESIS_DER: ")"> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de agrupacion: "+image);
+	}
+	| 
+	<CORCHETE_IZQ: "{"> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de agrupacion: "+image);
+	}
+	| 
+	<CORCHETE_DER: "}"> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de agrupacion: "+image);
+	}
+	|
+	<COMA: ",">	{
+		System.out.println(matchedToken.beginLine + ". Encontre una coma: "+image);
+	}
+	| 
+	<PUNTO_COMA: ";">	{
+		System.out.println(matchedToken.beginLine + ". Encontre un punto y coma: "+image);
+	}
+
+
+
+
+
+
+
+	|
+	<IGUAL: "="> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de asignacion: "+image);
+	}
+	| 
+	<SUMA: "+"> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de suma: "+image);
+	}
+	|
+	<RESTA: "-"> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de resta: "+image);
+	}
+	|
+	<MULTIPLICACION: "*"> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de multiplicacion: "+image);
+	}
+	|
+	<DIVISION: "/"> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de division: "+image);
+	}
+	|
+	<MODULO: "%"> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador resto: "+image);
+	}
+
+
+	|
+	<MENOR_QUE: "<"> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador relacional: "+image);
+	}
+	|
+	<MAYOR_QUE: ">"> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de relacional: "+image);
+	}
+	|
+	<MENOR_IGUAL_QUE: "<="> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador relacional: "+image);
+	}
+	|
+	<MAYOR_IGUAL_QUE: ">="> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de relacional: "+image);
+	}
+	|
+	<IGUAL_IGUAL: "=="> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de relacional: "+image);
+	}
+
+
+
+	|
+	<DISTINTO: "!="> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de logico: "+image);
+	}
+	|
+	<AND: "&&"> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de logico: "+image);
+	}
+	|
+	<OR: "||"> {
+		System.out.println(matchedToken.beginLine + ". Encontre operador de logico: "+image);
+	}
+
+
+	|
+	<EXCLAMACION: "!"> {
+		System.out.println(matchedToken.beginLine + ". Encontre un exclamacion: "+image);
+	}
+	|
+	<DOS_PUNTOS: ":"> {
+		System.out.println(matchedToken.beginLine + ". Encontre un dos puntos: "+image);
+	}
+	| 
+	<COMILLAS: "\"">	{
+		System.out.println(matchedToken.beginLine + ". Encontre una comilla: "+image);
+	}
+
+}
+
+TOKEN:
+{
+	<PUBLIC: "public" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<CLASS: "class" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<STATIC: "static" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<VOID: "void" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<MAIN: "main" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<INT: "int" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<FLOAT: "float" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<IF: "if" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<ELSE: "else" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<FOR: "for" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<WHILE: "while" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<SYSTEM: "System" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<STRING: "string" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<ARG: "arg" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<INTEGER: "Integer" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<BOOL: "bool" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<BOOLEAN: "boolean" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<TRUE: "true" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<FALSE: "false" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<RETURN: "return" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<DEF: "def" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<BREAK: "break" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<CONTINUE: "continue" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+	|
+	<PRINT: "print" >{
+		System.out.println(matchedToken.beginLine + ". Encontre una palabra reservada: "+image);	
+	}
+}
+
+TOKEN:
+{
+	<ID: ( ["a"-"z", "A"-"Z"] ) ( ["a"-"z", "A"-"Z", "0"-"9", "_"] )*>{
+		System.out.println(matchedToken.beginLine + ". Encontre un ID: "+image);	
+	}
+	|
+	<NUMERO_INT:( ["0"-"9"] )+ > {
+		if(Integer.parseInt(image.toString()) > 32767){
+			System.out.println(matchedToken.beginLine + ". El numero: " +image +" excede el limite de 32767!!");
+		}
+		else{
+			System.out.println(matchedToken.beginLine + ". Encontre un Numero entero: "+image);
+		}	
+	}
+	|
+	<NUMERO_HEX: "0x"( ["0"-"9", "A"-"F"])+ > {
+		System.out.println(matchedToken.beginLine + ". Encontre un Numero Hexadecimal: "+image);	
+	}
+	|
+	<NUMERO_FLOAT: ( ["0"-"9"] )+ "." ( ["0"-"9"] )+ > {
+		System.out.println(matchedToken.beginLine + ". Encontre un Numero Flotante: "+image);	
+	}
+	|
+	<ARRAY: "\"" ( ~["\""] )* "\"">  {
+		System.out.println(matchedToken.beginLine + ". Encontre un Array: "+image);
+   	}
+}
+
+SPECIAL_TOKEN:
+{
+	<NUMERO_HEX_NT: "0x"( ["0"-"9", "A"-"Z"])+  > {
+		System.out.println(matchedToken.beginLine + ". Encontre un Numero Hexadecimal incorrecto: "+image);	
+	}
+	|
+	<ID_NT: ( ["0"-"9"] ) ( ["a"-"z", "A"-"Z", "0"-"9", "_"] )* >{
+		System.out.println(matchedToken.beginLine + ". Encontre un ID incorrecto: "+image);	
+	}
+	|
+	<ID_NT2: ( ["a"-"z", "A"-"Z"] ) ( ["a"-"z", "A"-"Z", "0"-"9", "_", "°", "#", "$", "&", "?", "¿", "¬", "^", "`", "¬"] )* >{
+		System.out.println(matchedToken.beginLine + ". Encontre un ID incorrecto: "+image);	
+	}
+	|
+	<NUMERO_FLOAT_NT1: "." ( ["0"-"9"] )+ > {
+		System.out.println(matchedToken.beginLine + ". Encontre un numero Flotante incorrecto: "+image);	
+	}
+	|
+	<NUMERO_FLOAT_NT2: ( ["0"-"9"] )+ "." > {
+		System.out.println(matchedToken.beginLine + ". Encontre un numero Flotante incorrecto: "+image);	
+	}
+}
+
+
+SKIP:
+{
+	" " 
+	| "\t" 
+	| "\n" 
+	| "\r"
+}
+
+SPECIAL_TOKEN:
+{
+   <COMENTARIO: "//" ( ~["\t", "\r", "\n"]  )* >{
+		System.out.println(matchedToken.beginLine + ". Encontre un comentario: "+image);	
+	}
+   |
+   <~[]>  {
+		System.out.println(matchedToken.beginLine + ". Encontre un caracter no valido: "+image);
+   }
+   |
+   <COMENTARIO_VARIASLINEAS: "/*" ( ~[] )* "*/">  {
+		System.out.println(matchedToken.beginLine + ". Encontre un comentario de varias lineas: "+image);
+   }
+}
+
+void unaExpresion():{}
+{
+	(exp())+
+}
+void exp():{}
+{
+term()expP()
+}
+void expP():{}
+{
+(LOOKAHEAD(2)opsuma()term()expP())*
+}
+void opsuma():{}
+{
+<SUMA>|<RESTA>
+}
+void term():{}
+{
+factor()termP() 
+}
+void termP():{}
+{
+(LOOKAHEAD(2)opmultdiv()factor()termP())*
+}
+void opmultdiv():{}
+{
+<MULTIPLICACION>|<DIVISION>
+}
+void  factor():{}
+{
+	<PARENTESIS_IZQ> exp() <PARENTESIS_DER> | <NUMERO_INT> | <ID>
+}
+	
+	
+
+
+
+
+
+

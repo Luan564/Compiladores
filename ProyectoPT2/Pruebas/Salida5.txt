@@ -1,0 +1,2 @@
+1. Encontre un comentario: // This tests setting the stack frame size correctly
+2. Encontre una palabra reservada: int

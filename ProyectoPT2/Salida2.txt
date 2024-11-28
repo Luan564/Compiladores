@@ -1,0 +1,36 @@
+1. Encontre un comentario: //Ejemplo 2
+3. Encontre una palabra reservada: int
+3. Encontre un ID: globalCounter
+3. Encontre un punto y coma: ;
+5. Encontre una palabra reservada: def
+5. Encontre una palabra reservada: void
+5. Encontre un ID: main
+5. Encontre operador de agrupacion: (
+5. Encontre operador de agrupacion: )
+5. Encontre operador de agrupacion: {
+6. Encontre una palabra reservada: int
+6. Encontre un ID: a
+6. Encontre un punto y coma: ;
+7. Encontre una palabra reservada: string
+7. Encontre un ID: b
+7. Encontre un punto y coma: ;
+8. Encontre una palabra reservada: bool
+8. Encontre un ID: c
+8. Encontre un punto y coma: ;
+10. Encontre un ID: c
+10. Encontre operador de asignacion: =
+10. Encontre una palabra reservada: true
+10. Encontre un punto y coma: ;
+11. Encontre un ID: b
+11. Encontre operador de asignacion: =
+11. Encontre una cadena: "wow!"
+11. Encontre un punto y coma: ;
+12. Encontre un ID: a
+12. Encontre operador de asignacion: =
+12. Encontre un Numero entero: 3
+12. Encontre un punto y coma: ;
+13. Encontre una palabra reservada: if
+13. Encontre operador de agrupacion: (
+13. Encontre un ID: c
+13. Encontre operador de agrupacion: )
+13. Encontre un ID: a
